@@ -1,0 +1,26 @@
+Liczba tiles = 4 ^ zoom
+Rozmiar krawedzi tablicy tiles = sqrt(4 ^ zooom) = 2 ^ zoom
+
+Map options:
+maxBounds - the map restricts the view to the given geographical bounds, bouncing the user back if the user tries to pan outside the view (see setMaxBounds)
+
+Map methods:
+setMaxBounds(<Bounds> bounds) - Restricts the map view to the given bounds
+locate() - Tries to locate the user using the Geolocation API
+getBounds()
+getZoom()
+getCenter()
+
+
+GridLayer
+TileLayer
+==================
+???
+map.invalidateSize
+map.getPixelBounds
+
+Przy zmianie orientacji/wielkości ekranu odpala się "moveend" event (?)
+
+
+Aby zablokowac mape do danego obszaru na TileLayer trzeba dodac bounds: [bounds] oraz noWrap: true.
+Lub w map: maxBounds i TileLayer noWrap
