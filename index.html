@@ -6,6 +6,7 @@
     <title>Leaflet Offline Support</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css" integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA==" crossorigin="" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
         * {
             margin: 0;
@@ -14,14 +15,28 @@
         html, body {
             height: 100%;
         }
-        #map {
+        #container {
             height: 100%;
+            width: 100%;
+            position: fixed;
+            margin: 0;
+            padding: 0;
+            top: 0;
+            left: 0;
+        }
+        #map-id {
+            height: 100%;
+            width: 100%;
         }
     </style>
 </head>
 <body>
-    <div id="map"></div>
+    <div id="container">
+        <div id="map-id"></div>
+    </div>
     <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js" integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg==" crossorigin=""></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/localforage/1.5.0/localforage.js"></script>
+    <script src="leaflet-offline.js"></script>
     <script src="main.js"></script>
 </body>
 </html>
